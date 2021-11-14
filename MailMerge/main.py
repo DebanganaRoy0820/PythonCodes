@@ -11,7 +11,7 @@ for name in names:
         text = letter.readlines()
         text[0] = text[0].replace("[name]", name)
         # Save the letters in the folder "ReadyToSend".
-        fn = "C:/Users/dbsr6/PycharmProjects/MailMerge/Output/ReadyToSend/" + name + '.txt'
+        fn = "YOURPATH/MailMerge/Output/ReadyToSend/" + name + '.txt'
         with open(fn, mode='w') as new_letter:
             new_letter.writelines(text)
         new_letter.close()
