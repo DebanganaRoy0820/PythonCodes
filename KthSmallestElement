@@ -1,0 +1,5 @@
+def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        matrix=np.array(matrix)
+        result = matrix.flatten()
+        result.sort()
+        return result[k-1]
