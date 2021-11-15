@@ -1,0 +1,19 @@
+def preorderTraversal(self, root: TreeNode) -> List[int]:
+        current = root
+        stack = []
+        stack.append(root)
+        sol=[]
+        done = 0
+        
+        if root is None:
+            return sol
+        while(len(stack)>0):
+            current=stack.pop()
+            if current is not None:
+                sol.append(current.val)
+            if current.right is not None:
+                stack.append(current.right)
+            if current.left is not None:
+                stack.append(current.left)
+        return sol
+    
