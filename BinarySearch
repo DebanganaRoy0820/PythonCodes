@@ -1,0 +1,13 @@
+def search(self, nums: List[int], target: int) -> int:
+        l=0
+        u=len(nums) - 1
+        ret = -1
+        while l <= u:
+            m = (int)((l+u)/2)
+            if nums[m]<target:
+                l=m+1
+            elif nums[m]>target:
+                u=m-1
+            elif nums[m]==target:
+                return m
+        return ret
