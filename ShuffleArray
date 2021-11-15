@@ -1,0 +1,6 @@
+def shuffle(self) -> List[int]:
+        """
+        Returns a random shuffling of the array.
+        """
+        nums2=sorted(self.nums, key = lambda x: random.random())
+        return nums2
