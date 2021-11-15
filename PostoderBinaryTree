@@ -1,0 +1,17 @@
+def postorderTraversal(self, root: TreeNode) -> List[int]:
+        stack = deque()
+        stack.append(root)
+        sol=[]
+        
+        if root is None:
+            return sol
+        while stack:
+            current=stack.pop()
+            sol.append(current.val)
+            if current.left:
+                stack.append(current.left)
+            if current.right:
+                stack.append(current.right)
+        sol.reverse()
+            
+        return sol
